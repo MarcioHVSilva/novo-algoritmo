@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio9</title>
+</head>
+<body>
+    <label for="">Informe o nome do seu projeto:</label>
+    <input type="text" id="nomeProjeto"><br><br>
+    <button onclick="cadastrar()">Cadastrar</button>
+    <button onclick="mostrarProjeto()">Mostrar Projetos</button><br><br>
+    <div id="exibirProjeto"></div>
+</body>
+</html>
+
+<script>
+    var listaProjetos = []
+    function cadastrar() {
+        listaProjetos.push(nomeProjeto.value)
+        if(listaProjetos.length <= 4) {
+            exibirProjeto.innerHTML = `Você já fez ${listaProjetos.length} projetos. Por isso você é um profissional Júnior<br>` 
+        }else if(listaProjetos.length <= 12) {
+            exibirProjeto.innerHTML = `Você já fez ${listaProjetos.length} projetos. Por isso você é um profissional Pleno<br>`
+        }else {
+            exibirProjeto.innerHTML = `Você já fez ${listaProjetos.length} projetos. Por isso você é um profissional Sênior<br>`
+        }
+    }
+    function mostrarProjeto() {
+        for(var posicao = listaProjetos.length; posicao > 0; posicao -= 1) {
+            exibirProjeto.innerHTML += `${listaProjetos[posicao - 1]}<br>`
+        }
+    }
+</script>

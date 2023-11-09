@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio7</title>
+</head>
+<body>
+    <label for="filmeFavorito">Informe um filme que gosta:</label>
+    <input type="text" id="filmeFavorito"><br><br>
+    <button onclick="cadastrarFilme()">Cadastrar</button><br><br>
+    <div id="exibirFilme"></div>
+</body>
+</html>
+
+<script>
+    var listaFilme = []
+    var posicao = 0
+    function cadastrarFilme() {
+        listaFilme.push(filmeFavorito.value)
+        if(posicao % 2 == 0) {
+            exibirFilme.innerHTML += `<span style = "color: blue;">${listaFilme[listaFilme.length - 1]}</span><br>` 
+        }else {
+            exibirFilme.innerHTML += `<span style = "color: red;">${listaFilme[listaFilme.length - 1]}</span><br>` 
+        }
+        posicao += 1
+    }
+</script>

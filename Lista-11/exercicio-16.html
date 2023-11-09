@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Digite um numero qualquer:
+    <input id="inp_numero">
+
+    <button onclick="analisarhistorico()">Analisar histórico</button>
+
+    <div id="exibir"></div>
+
+</body>
+
+</html>
+
+<script>
+    var Lista_numeros_cadastrados = [];
+
+    function analisarhistorico() {
+        var numerodigitado = Number(inp_numero.value);
+        Lista_numeros_cadastrados.push(numerodigitado);
+        var maior = Lista_numeros_cadastrados[0];
+        var menor = Lista_numeros_cadastrados[0];
+
+
+        exibir.innerHTML = "";
+        for (var contagem = 0; contagem < Lista_numeros_cadastrados.length; contagem++) {
+            exibir.innerHTML += `${contagem + 1}º Número ${Lista_numeros_cadastrados[contagem]}<br>`;
+        }
+
+
+
+        for (var numero = 0; numero < Lista_numeros_cadastrados.length; numero += 1) {
+            if (Lista_numeros_cadastrados[numero] >= maior) {
+exibir.innerHTML+=`Maior ${maior}`;
+            }
+           
+
+
+        }
+
+
+
+
+
+
+
+    }
+</script>

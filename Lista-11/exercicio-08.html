@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio8</title>
+</head>
+<body>
+    <label for="nomeAluno">Informe o nome do aluno</label>
+    <input type="text" id="nomeAluno"><br><br>
+    <button onclick="cadastrar()">Cadastrar</button><br><br>
+    <div id="exibirNome"></div>
+</body>
+</html>
+
+<script>
+    var listaNome = []
+    function cadastrar() {
+        listaNome.push(nomeAluno.value)
+        exibirNome.innerHTML = ``
+        for(var posicao = listaNome.length; posicao > 0; posicao -= 1) {
+            exibirNome.innerHTML += `${listaNome[posicao - 1]}<br>`
+        }
+    }
+</script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="sortear()">Sortear o Time</button>
+    <div id="exibir"></div>
+
+
+</body>
+</html>
+<script>
+    function sortear(){
+        var escudos=["https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Brasao_do_Sao_Paulo_Futebol_Clube.svg/2054px-Brasao_do_Sao_Paulo_Futebol_Clube.svg.png","https://media.santosfc.com.br/wp-content/uploads/2022/04/Escudo-sem-estrelas229x220-1.png","https://sep-bucket-prod.s3.amazonaws.com/wp-content/uploads/2021/10/escudos-inst_3.png","https://http2.mlstatic.com/D_NQ_NP_741289-MLB32696048444_102019-O.webp"]
+
+        var sorteando = parseInt(Math.random() * 4);
+        
+        exibir.innerHTML=`<img src="${escudos[sorteando]}" "witdh:150px; height=150px">`;
+        
+
+    }
+</script>
